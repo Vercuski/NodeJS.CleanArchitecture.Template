@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Language & module target */
+    "target": "esnext",
+    "lib": ["esnext"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+
+    /* Let source files import each other with real ".ts" extensions
+       (so `node src/main.ts` works with zero build step), and rewrite
+       them to ".js" automatically if we ever run `tsc` to emit dist/. */
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+
+    /* Reject any syntax Node's native type-stripping can't run
+       (enums, parameter properties, namespaces, etc.) so the code
+       is guaranteed to run directly on Node without a transpiler. */
+    "erasableSyntaxOnly": true,
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Output (only used by `npm run build`; dev/start run .ts directly) */
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}
